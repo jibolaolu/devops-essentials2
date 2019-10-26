@@ -1,11 +1,9 @@
 variable "subnet_id" {
-  default = "subnet-00ac8967c7a8e25ed"
+  default = "subnet-0fe6923d043aa63a9"
 }
 variable "vpc_id" {
-  default = "vpc-0767187dbc914d321"
+  default = "vpc-07704bc6bdbc696ca"
 }
-
-
 
 
 variable "instance_type" {
