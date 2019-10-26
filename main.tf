@@ -39,8 +39,8 @@ resource "aws_security_group" "apps_allow" {
   }
 
   ingress {
-    from_port   = 8081
-    to_port     = 8081
+    from_port   = 8082
+    to_port     = 8082
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
