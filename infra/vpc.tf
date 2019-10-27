@@ -6,7 +6,7 @@ resource "aws_vpc" "vpc" {
   enable_dns_support   = true
 
   tags = {
-    name        = "main_${var.environment}-vpc"
+    Name        = "main_${var.environment}-vpc"
     environment = "${var.environment}"
     managed_by  = "${var.managed_by}"
   }
@@ -16,7 +16,7 @@ resource "aws_internet_gateway" "ig" {
   vpc_id = "${aws_vpc.vpc.id}"
 
   tags = {
-    name        = "main_-${var.environment}-ig"
+    Name        = "main_-${var.environment}-ig"
     environment = "${var.environment}"
     managed_by  = "${var.managed_by}"
   }
@@ -30,7 +30,7 @@ resource "aws_subnet" "public" {
   map_public_ip_on_launch = false
 
   tags = {
-    name        = "${var.app_name}-${var.environment}-public-subnet-${count.index}"
+    Name        = "${var.app_name}-${var.environment}-public-subnet-${count.index}"
     environment = "${var.environment}"
     managed_by  = "${var.managed_by}"
   }
@@ -46,7 +46,7 @@ resource "aws_route_table" "public" {
   }
 
   tags = {
-    name        = "${var.app_name}-${var.environment}-public-routes"
+    Name        = "${var.app_name}-${var.environment}-public-routes"
     environment = "${var.environment}"
     managed_by  = "${var.managed_by}"
   }

@@ -30,5 +30,9 @@ sudo yum install git -y
 
 sudo yum install maven -y
 
+##Install NodeJs
+sudo yum install -y gcc-c++ make
+sudo curl -sL https://rpm.nodesource.com/setup_10.x | sudo -E bash -
+sudo yum install -y nodejs
 
 

@@ -2,13 +2,13 @@ variable "instance_type" {
   default = "t2.micro"
 }
 variable "key_name" {
-  default = "jenkins_key4"
+  default = "LinuxKeyPair"
 }
 variable "ami_id" {
-  default = "ami-0ce71448843cb18a1"
+  default = "ami-00a1270ce1e007c27"
 }
 variable "region" {
-  default = "eu-west-1"
+  default = "eu-west-2"
 }
 
 variable "managed_by" {
