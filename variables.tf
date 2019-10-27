@@ -1,8 +1,8 @@
 variable "subnet_id" {
-  default = "subnet-0fe6923d043aa63a9"
+  default = "subnet-055b1e9bad87e5d0f"
 }
 variable "vpc_id" {
-  default = "vpc-07704bc6bdbc696ca"
+  default = "vpc-04bd8fa3d060bfd81"
 }
 
 
@@ -10,13 +10,13 @@ variable "instance_type" {
   default = "t2.micro"
 }
 variable "key_name" {
-  default = "jenkins_key4"
+  default = "LinuxKeyPair"
 }
 variable "ami_id" {
-  default = "ami-0ce71448843cb18a1"
+  default = "ami-00a1270ce1e007c27"
 }
 variable "region" {
-  default = "eu-west-1"
+  default = "eu-west-2"
 }
 
 variable "managed_by" {
@@ -25,7 +25,7 @@ variable "managed_by" {
 }
 
 variable "app_name" {
-  default = "JenkinsSetup"
+  default = "TomcatServer"
 }
 
 variable "environment" {
