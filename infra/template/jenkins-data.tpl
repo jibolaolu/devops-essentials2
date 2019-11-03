@@ -36,3 +36,8 @@ sudo curl -sL https://rpm.nodesource.com/setup_10.x | sudo -E bash -
 sudo yum install -y nodejs
 
 
+##Install Docker
+
+sudo yum install docker -y
+sudo usermod -aG docker jenkins
+sudo chkconfig docker on
