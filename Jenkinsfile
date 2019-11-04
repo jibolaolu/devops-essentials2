@@ -22,13 +22,19 @@ pipeline {
                  sh 'cd codebase && mvn clean install'
              }
          }
+
          stage ('deploy code to App Server') {
              steps  {
                  echo  'deployed'
-                 sh ' cp /tmp/key.pem /tmp/jenkinskey.pem && chmod 400  /tmp/jenkinskey.pem'
-                 sh 'scp -i  /tmp/jenkinskey.pem -o StrictHostKeyChecking=no codebase/target/SampleServlet.war  ec2-user@172.31.12.75:/var/lib/tomcat/webapps'
-             }
-        }
+                 
+	withCredentials([file(credentialsId: 'key_pair', variable: 'THE_KEY')]) {
+    
+          sh 'scp -i  THE_KEY -o StrictHostKeyChecking=no codebase/target/SampleServlet.war  ec2-user@172.31.12.75:/var/lib/tomcat/webapps'
+	
+	
+}
+   }
+      }
         stage ('Test code on App Server') {
              steps  {
                  echo  'code tested'
