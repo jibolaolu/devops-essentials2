@@ -1,8 +1,8 @@
 variable "subnet_id" {
-  default = "subnet-007774729a4279236"
+  default = "subnet-000c0cc87c3d5875c"
 }
 variable "vpc_id" {
-  default = "vpc-04aad21cd874d6d6b"
+  default = "vpc-0589de2da9510e0ba"
 }
 variable "instance_type" {
   default = "t2.micro"
@@ -23,7 +23,7 @@ variable "managed_by" {
 }
 
 variable "app_name" {
-  default = "TomcatServer"
+  default = "Webserver"
 }
 
 variable "environment" {
