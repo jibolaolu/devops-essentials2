@@ -41,3 +41,5 @@ sudo yum install -y nodejs
 sudo yum install docker -y
 sudo usermod -aG docker jenkins
 sudo chkconfig docker on
+sudo systemctl start docker 
+sudo systemctl enable docker
