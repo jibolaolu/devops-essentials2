@@ -29,7 +29,7 @@ pipeline {
                  
 	withCredentials([file(credentialsId: 'key_pair', variable: 'THE_KEY')]) {
     
-          sh 'scp -i  THE_KEY -o StrictHostKeyChecking=no codebase/target/SampleServlet.war  ec2-user@172.31.12.75:/var/lib/tomcat/webapps'
+          sh 'scp -i  THE_KEY -o StrictHostKeyChecking=no codebase/target/SampleServlet.war  ec2-user@10.0.0.247:/var/lib/tomcat/webapps'
 	
 	
 }
