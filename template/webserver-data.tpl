@@ -9,7 +9,7 @@ sudo yum update -y
 sudo yum -y install java-1.8.0-openjdk-devel.x86_64
 
 ## install Nginx
-sudo yum install nginx -y
+sudo yum install nginx1 -y
 service nginx start
 
 
