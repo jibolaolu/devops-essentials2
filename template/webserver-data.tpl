@@ -9,7 +9,8 @@ sudo yum update -y
 sudo yum -y install java-1.8.0-openjdk-devel.x86_64
 
 ## install Nginx
-sudo yum install nginx1 -y
-service nginx start
+sudo amazon-linux-extras install nginx1.12
+sudo service nginx start
+sudo chkconfig nginx on
 
 
