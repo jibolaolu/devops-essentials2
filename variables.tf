@@ -1,8 +1,8 @@
 variable "subnet_id" {
-  default = "subnet-0738822d43d041b44"
+  default = "subnet-0ae8694ffaf3ddaa2"
 }
 variable "vpc_id" {
-  default = "vpc-081cff1610358c00b"
+  default = "vpc-02f179c990c2fd020"
 }
 variable "instance_type" {
   default = "t2.micro"
